@@ -1,0 +1,93 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.*.example
+.env.local.*
+.envrc
+
+# Generated dependency directories
+node_modules/
+jspm_packages/
+.pnp/
+.pnp.js
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnpm-store/
+npm-packages-offline-cache/
+
+# Build and production artifacts
+dist/
+build/
+public/build/
+.output/
+.next/
+.nuxt/
+.svelte-kit/
+storybook-static/
+.vercel/
+.netlify/
+
+# Tooling caches
+.cache/
+.vite/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.sass-cache/
+.turbo/
+.rollup.cache/
+.rpt2_cache/
+.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Test and coverage output
+coverage/
+.nyc_output/
+cypress/videos/
+cypress/screenshots/
+playwright-report/
+.playwright/
+
+# Logs and profiling data
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.pid
+*.seed
+*.tgz
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+*~
+
+# Local configuration and secrets
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.pem
+*.p12
+*.key
+*.crt
+*.local
+
+# Editor/IDE noise (retain shareable config)
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+
+# Repository-specific ignores
+.github/instructions/codacy.instructions.md

@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+
+
+:root {
+  --radius: 0.625rem;
+
+  /* Lauren Bays Beauty Color Palette from palette.png */
+  --color-gold: #C9A05F;
+  --color-gold-dark: #9B7A47;
+  --color-gold-light: #E5C89A;
+  --color-cream: #F4EFE6;
+  --color-teal: #1E4D4A;
+  --color-blush: #d97ba8;
+  --color-blush-dark: #c45a8a;
+  --color-blush-light: #e5a3c3;
+  --color-rose: #e7c8c8;
+
+  /* Light Mode Theme Variables */
+  --background: #F8F5F0;
+  --foreground: #333333;
+  --card: #FFFFFF;
+  --card-foreground: #333333;
+  --popover: #FFFFFF;
+  --popover-foreground: #333333;
+  --primary: var(--color-blush);
+  --primary-foreground: #3F1E42;
+  --secondary: #EFE6DC;
+  --secondary-foreground: #333333;
+  --muted: #E9DED2;
+  --muted-foreground: #666666;
+  --accent: #A08D7A;
+  --accent-foreground: #F8F5F0;
+  --destructive: #dc2626;
+  --border: #E0D6CC;
+  --input: #E0D6CC;
+  --ring: var(--color-blush);
+  --chart-1: var(--color-blush);
+  --chart-2: #A08D7A;
+  --chart-3: #666666;
+  --chart-4: #E4D6C8;
+  --chart-5: #333333;
+  --sidebar: #F8F5F0;
+  --sidebar-foreground: #333333;
+  --sidebar-primary: var(--color-blush);
+  --sidebar-primary-foreground: #3F1E42;
+  --sidebar-accent: #EFE6DC;
+  --sidebar-accent-foreground: #333333;
+  --sidebar-border: #E0D6CC;
+  --sidebar-ring: var(--color-blush);
+}
+
+.dark {
+  /* Dark Mode mirrors the logo text color for an inverse feel */
+  --background: #A08D7A;
+  --foreground: #F8F5F0;
+  --card: #8C7967;
+  --card-foreground: #F8F5F0;
+  --popover: #8C7967;
+  --popover-foreground: #F8F5F0;
+  --primary: var(--color-blush);
+  --primary-foreground: #3F1E42;
+  --secondary: #7B6858;
+  --secondary-foreground: #F8F5F0;
+  --muted: #7B6858;
+  --muted-foreground: #F1E8DD;
+  --accent: #F8F5F0;
+  --accent-foreground: #5B4A3A;
+  --destructive: #dc2626;
+  --border: #6C5A4C;
+  --input: #6C5A4C;
+  --ring: var(--color-blush-light);
+  --chart-1: var(--color-blush-light);
+  --chart-2: #DECBB7;
+  --chart-3: #F1E8DD;
+  --chart-4: #845F3F;
+  --chart-5: #4A3B2D;
+  --sidebar: #8C7967;
+  --sidebar-foreground: #F8F5F0;
+  --sidebar-primary: var(--color-blush);
+  --sidebar-primary-foreground: #3F1E42;
+  --sidebar-accent: #7B6858;
+  --sidebar-accent-foreground: #F8F5F0;
+  --sidebar-border: #6C5A4C;
+  --sidebar-ring: var(--color-blush-light);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-dark);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Custom Black, White, Gold Utilities */
+.bg-gold {
+  background-color: var(--color-gold);
+}
+
+.bg-gold-dark {
+  background-color: var(--color-gold-dark);
+}
+
+.bg-gold-light {
+  background-color: var(--color-gold-light);
+}
+
+.bg-blush {
+  background-color: var(--color-blush);
+}
+
+.bg-blush-dark {
+  background-color: var(--color-blush-dark);
+}
+
+.bg-blush-light {
+  background-color: var(--color-blush-light);
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+.text-gold-dark {
+  color: var(--color-gold-dark);
+}
+
+.text-gold-light {
+  color: var(--color-gold-light);
+}
+
+.text-blush {
+  color: var(--color-blush);
+}
+
+.text-blush-dark {
+  color: var(--color-blush-dark);
+}
+
+.text-blush-light {
+  color: var(--color-blush-light);
+}
+
+.border-gold {
+  border-color: var(--color-gold);
+}
+
+.border-blush {
+  border-color: var(--color-blush);
+}
+
+.bg-rose {
+  background-color: var(--color-rose);
+}
+
+.text-rose {
+  color: var(--color-rose);
+}
+
+.border-rose {
+  border-color: var(--color-rose);
+}
+
+.hover\:bg-rose:hover {
+  background-color: var(--color-rose);
+}
+
+.hover\:text-rose:hover {
+  color: var(--color-rose);
+}
+
+.hover\:bg-gold:hover {
+  background-color: var(--color-gold);
+}
+
+.hover\:bg-gold-dark:hover {
+  background-color: var(--color-gold-dark);
+}
+
+.hover\:bg-blush:hover {
+  background-color: var(--color-blush);
+}
+
+.hover\:bg-blush-dark:hover {
+  background-color: var(--color-blush-dark);
+}
+
+.hover\:text-gold:hover {
+  color: var(--color-gold);
+}
+
+.hover\:text-blush:hover {
+  color: var(--color-blush);
+}
+
+.from-blush {
+  --tw-gradient-from: var(--color-blush);
+  --tw-gradient-to: rgb(242 171 241 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-blush-light {
+  --tw-gradient-to: var(--color-blush-light);
+}
+
+/* Theme transition */
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
