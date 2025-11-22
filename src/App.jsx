@@ -2,11 +2,7 @@
 import { MapPin, Phone } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import './App.css'
-import heroImage from './assets/background.png'
-import logoFadeLeftRight from './assets/logo_fade_left_right.png'
-import logoFadeRightLeft from './assets/logo_fade_right_left.png'
-import logoMedium from './assets/logo_medium.png'
-import logoPattern from './assets/logo_pattern.png'
+import logoMark from './assets/LogoMark-4.png'
 
 function App() {
   const [showNewsletter, setShowNewsletter] = useState(false)
@@ -51,7 +47,7 @@ function App() {
             </span>
             <a
               href="tel:+16788197200"
-              className="flex items-center gap-2 text-foreground hover:text-blush transition-colors"
+              className="flex items-center gap-2 lb-link"
             >
               <Phone className="w-4 h-4 text-blush" />
               678-819-7200
@@ -60,43 +56,16 @@ function App() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-24">
-            <img src={logoMedium} alt="Lauren Bays Beauty" className="h-16 w-auto" />           
+            <img src={logoMark} alt="Lauren Bays Beauty" className="h-16 w-auto" />           
           </div>
         </div>
       </motion.nav>
 
       <main className="pt-[9rem]">
-        <section className="relative h-[calc(100vh-9rem)] flex items-center overflow-hidden">
-          <div className="absolute inset-0">
-            <div
-              className="absolute inset-0 bg-cover bg-center scale-110"
-              style={{ backgroundImage: `url(${heroImage})` }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/20" />
-            <div
-              className="absolute inset-0 opacity-[0.08] mix-blend-soft-light"
-              style={{
-                backgroundImage: `url(${logoPattern})`,
-                backgroundSize: '220px',
-                backgroundRepeat: 'repeat'
-              }}
-            />
-            <img
-              src={logoFadeLeftRight}
-              alt=""
-              aria-hidden="true"
-              className="absolute -top-20 left-[-12rem] w-[36rem] opacity-25 mix-blend-multiply"
-            />
-            <img
-              src={logoFadeRightLeft}
-              alt=""
-              aria-hidden="true"
-              className="absolute bottom-[-6rem] right-[-12rem] w-[40rem] opacity-25 mix-blend-multiply"
-            />
-            <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background/75 via-transparent to-transparent" />
-          </div>
+        <section className="relative min-h-[calc(100vh-9rem)] flex items-center lb-hero-background lb-sparkle overflow-hidden">
+          <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background/75 via-transparent to-transparent" />
           <div className="relative z-10 w-full">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-8 text-center">
               <motion.h1
                 className="text-3xl md:text-5xl lg:text-6xl font-light leading-tight"
                 style={{ color: '#3F1E42' }}
@@ -106,38 +75,46 @@ function App() {
               >
                 We're Just Getting Started
               </motion.h1>
-              <motion.p
-                className="mt-10 text-lg md:text-2xl text-muted-foreground leading-relaxed"
+              <motion.div
+                className="mt-8 space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed"
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.9, delay: 0.1, ease: 'easeOut' }}>
-                We're thrilled to welcome you to Lauren Bays Beauty! Our doors are newly open, and we're building something 
-                truly special. Stay tuned as we grow our team, expand our services, and continue crafting the luxury experience 
-                you deserve. We are hiring! If you would like to join our team, please submit your resume to <a href="mailto:admin@laurenbaysbeauty.com" className="text-blush underline">admin@laurenbaysbeauty.com</a>.
-              </motion.p>
+                transition={{ duration: 0.9, delay: 0.15, ease: 'easeOut' }}
+              >
+                <p className="text-xl md:text-2xl">
+                  We're thrilled to welcome you to Lauren Bays Beauty! Our doors are newly open, and we're building something
+                  truly special.
+                </p>
+                <p>
+                  Stay tuned as we grow our team, expand our services, and continue crafting the luxury experience you deserve.
+                  We are hiring! If you would like to join our team, please submit your resume to{' '}
+                  <a href="mailto:admin@laurenbaysbeauty.com" className="lb-link">
+                    admin@laurenbaysbeauty.com
+                  </a>
+                  .
+                </p>
+              </motion.div>
               <motion.div
-                className="mt-16 flex flex-col sm:flex-row gap-6 justify-center items-center"
+                className="mt-10 flex flex-col sm:flex-row flex-wrap gap-6 justify-center items-center"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+                transition={{ duration: 0.8, delay: 0.25, ease: 'easeOut' }}
               >
                 <motion.a
                   href="https://booking.mangomint.com/470523"
-                  className="inline-block rounded-3xl bg-white hover:bg-white/90 px-12 py-6 text-lg font-semibold shadow-sm hover:shadow-md transition-all duration-300"
-                  style={{ border: '2px solid #e7c8c8', color: '#3F1E42' }}
-                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="inline-flex items-center justify-center px-10 py-4 text-base md:text-lg font-semibold lb-btn-primary cursor-pointer"
+                  whileHover={{ scale: 1.03, y: -2 }}
                   transition={{ duration: 0.2 }}
                 >
-                  Book Your Appointment
+                  Book Your Treatment &rarr;
                 </motion.a>
                 <motion.button
                   onClick={() => setShowNewsletter(true)}
-                  className="inline-block rounded-3xl bg-white hover:bg-white/90 px-12 py-6 text-lg font-semibold shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
-                  style={{ border: '2px solid #e7c8c8', color: '#3F1E42' }}
+                  className="inline-flex items-center justify-center px-10 py-4 text-base md:text-lg font-semibold lb-btn-secondary cursor-pointer"
                   whileHover={{ scale: 1.05, y: -2 }}
                   transition={{ duration: 0.2 }}
                 >
-                  Receive Email Updates
+                  Join Email Updates &rarr;
                 </motion.button>
               </motion.div>
             </div>
@@ -147,34 +124,81 @@ function App() {
 
       {showNewsletter && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 lb-mangomint-overlay"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setShowNewsletter(false)}
         >
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-md" />
+
           <motion.div
-            className="relative bg-white rounded-3xl shadow-2xl"
-            style={{ width: '900px', height: '800px' }}
-            initial={{ scale: 0.95, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.95, opacity: 0 }}
+            className="
+        relative
+        bg-white/95
+        rounded-[36px]
+        shadow-[0_25px_60px_rgba(0,0,0,0.18)]
+        border
+        border-[rgba(198,170,123,0.25)]  /* soft gold border */
+        overflow-hidden
+        flex
+        flex-col
+      "
+            style={{
+              maxWidth: '900px',
+              width: '90vw',
+              maxHeight: '800px',
+              height: '90vh',
+            }}
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.92 }}
+            transition={{ type: 'spring', stiffness: 120, damping: 14 }}
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Close Button */}
             <button
               onClick={() => setShowNewsletter(false)}
-              className="absolute top-4 right-4 z-10 text-gray-400 hover:text-gray-600 transition-colors"
+              className="
+          absolute top-4 right-4 z-10
+          p-2 rounded-full
+          bg-white/80 backdrop-blur
+          border border-[#e8dfdc]      /* rose pale */
+          shadow-sm
+          hover:bg-white
+          hover:shadow-md
+          transition
+        "
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg className="w-5 h-5 text-[#444]" fill="none" viewBox="0 0 24 24">
+                <path
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
-            <iframe
-              src="https://mangomint.co/BAP074"
-              style={{ border: 'none', width: '100%', height: '100%', borderRadius: '24px' }}
-              title="Stay in the Loop Newsletter"
-            />
+
+            {/* Header */}
+            <div className="text-center py-6 px-8 border-b border-[#e8dfdc] bg-[#f1e9cf]/40">
+              <div className="text-2xl font-semibold tracking-wide text-[#a68074]">Lauren Bays Beauty</div>              
+            </div>
+
+            {/* iFrame wrapper with gradient border */}
+            <div className="flex-1 p-4 sm:p-6 bg-[#fdf9f5]">
+              <div className="lb-gradient-border w-full h-full">
+                <div className="lb-gradient-border-inner w-full h-full rounded-2xl shadow-inner overflow-hidden">
+                  <iframe
+                    src="https://mangomint.co/BAP074"
+                    className="w-full h-full lb-mangomint-frame"
+                    style={{ border: 'none' }}
+                    title="Stay in the Loop Newsletter"
+                  />
+                </div>
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       )}

@@ -90,7 +90,27 @@
   --sidebar-accent-foreground: #333333;
   --sidebar-border: #E0D6CC;
   --sidebar-ring: var(--color-blush);
+
+  /* Logo-driven palette (from hero + modal exploration) */
+  --lb-bg: #fdf9f5;
+  --lb-surface: #ffffff;
+  --lb-surface-soft: #f1e9cf;
+  --lb-gold: #c8a93f;
+  --lb-gold-soft: #e3d49f;
+  --lb-gold-pale: #f1e9cf;
+  --lb-rose: #a68074;
+  --lb-rose-soft: #d2bfb9;
+  --lb-rose-pale: #e8dfdc;
+  --lb-ink: #111111;
+  --lb-text-main: #2a1c18;
+  --lb-text-muted: #7b5d56;
+  --lb-border-subtle: rgba(0, 0, 0, 0.04);
+  --lb-radius-lg: 18px;
+  --lb-radius-pill: 999px;
+  --lb-shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.08);
+  --lb-shadow-subtle: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
+
 
 .dark {
   /* Dark Mode mirrors the logo text color for an inverse feel */
@@ -301,4 +321,108 @@ html {
   transition-property: background-color, border-color, color;
   transition-duration: 0.3s;
   transition-timing-function: ease;
+}
+
+
+/* Luxury hero background (LB palette) */
+.lb-hero-background {
+  background: linear-gradient(
+    135deg,
+    #f1e9cf 0%,
+    #e8dfdc 40%,
+    rgba(166, 128, 116, 0.13) 70%,
+    rgba(200, 169, 63, 0.14) 100%
+  );
+}
+
+/* Ambient gold/rose shimmer */
+.lb-sparkle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(200, 169, 63, 0.20), transparent 55%),
+    radial-gradient(circle at 70% 65%, rgba(166, 128, 116, 0.20), transparent 60%);
+  pointer-events: none;
+}
+
+/* Primary button (Gold → Deep Gold) */
+.lb-btn-primary {
+  background: linear-gradient(135deg, #c8a93f, #b99933);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.85rem 1.75rem;
+  font-weight: 500;
+  box-shadow: 0 12px 24px rgba(200, 169, 63, 0.25);
+  transition: all 0.2s ease;
+}
+
+.lb-btn-primary:hover {
+  background: linear-gradient(135deg, #d5be6f, #c8a93f);
+  box-shadow: 0 16px 32px rgba(200, 169, 63, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Secondary button (Rose Outline) */
+.lb-btn-secondary {
+  background: #ffffff;
+  border: 1px solid #a68074;
+  color: #a68074;
+  border-radius: 999px;
+  padding: 0.85rem 1.75rem;
+  transition: all 0.2s ease;
+}
+
+.lb-btn-secondary:hover {
+  background: #f1e9cf;
+  border-color: #c8a93f;
+  color: #7b5d56;
+}
+
+/* Text link (Rose → Gold hover) */
+.lb-link {
+  color: #a68074;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.lb-link:hover {
+  color: #c8a93f;
+  text-decoration-color: #c8a93f;
+  text-decoration-thickness: 2px;
+}
+
+/* Gradient border wrapper */
+.lb-gradient-border {
+  padding: 2px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #c8a93f, #a68074);
+}
+
+.lb-gradient-border-inner {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 1.5rem;
+}
+
+
+/* Newsletter overlay styling (booking sidebar uses Mangomint's defaults) */
+.lb-mangomint-overlay {
+  background: rgba(0, 0, 0, 0.55) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: left !important;
+  padding: 1.5rem !important;
+  box-sizing: border-box !important;
+}
+
+/* Newsletter iframe frame sizing (do not override Mangomint booking sidebar) */
+.lb-mangomint-frame {
+  max-width: 900px !important;
+  width: 100% !important;
+  max-height: 90vh !important;
+  height: 100% !important;
+  border-radius: 32px !important;
+  box-shadow: var(--lb-shadow-soft) !important;
 }

@@ -1,4 +1,4 @@
-# Bayless Beauty Med Spa Website
+# lauren bays Beauty Med Spa Website
 
 A modern, luxury medical spa website built with React, Vite, Tailwind CSS, and Framer Motion featuring stunning parallax scrolling effects.
 
@@ -84,16 +84,16 @@ The project uses:
 
 ## 📄 License
 
-Copyright © 2025 Bayless Beauty Med Spa. All rights reserved.
+Copyright © 2025 lauren bays Beauty Med Spa. All rights reserved.
 
 ## 🤝 Contributing
 
-This is a private project for Bayless Beauty Med Spa.
+This is a private project for lauren bays Beauty Med Spa.
 
 ## 📞 Contact
 
 For inquiries about this website, please contact:
-- Email: info@baylessbeauty.com
+- Email: info@lauren baysbeauty.com
 - Phone: (555) 123-4567
 
 ---

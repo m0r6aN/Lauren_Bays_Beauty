@@ -1,8 +1,8 @@
-# Bayless Beauty Med Spa - Landing Page Content Draft
+# lauren bays Beauty Med Spa - Landing Page Content Draft
 
 ## 1. Hero Section
 
-**Headline:** Discover Your Radiance at Bayless Beauty Med Spa
+**Headline:** Discover Your Radiance at lauren bays Beauty Med Spa
 
 **Sub-headline:** Indulge in a serene oasis where advanced aesthetic treatments meet personalized care, designed to unveil your natural beauty.
 
@@ -12,7 +12,7 @@
 
 **Headline:** Our Curated Treatments
 
-**Introduction:** At Bayless Beauty, we offer a comprehensive range of luxurious treatments tailored to enhance your natural beauty and promote overall well-being. Our expert team utilizes the latest techniques and premium products to deliver exceptional results.
+**Introduction:** At lauren bays Beauty, we offer a comprehensive range of luxurious treatments tailored to enhance your natural beauty and promote overall well-being. Our expert team utilizes the latest techniques and premium products to deliver exceptional results.
 
 **Service Categories (Examples - to be refined):
 
@@ -31,9 +31,9 @@
 
 ## 3. About Us Section
 
-**Headline:** The Bayless Beauty Difference
+**Headline:** The lauren bays Beauty Difference
 
-**Content:** Bayless Beauty Med Spa is dedicated to providing an unparalleled experience in aesthetic care. We believe in a holistic approach to beauty, combining innovative treatments with a tranquil environment and personalized attention. Our mission is to empower you to look and feel your absolute best, with results that are both natural and transformative.
+**Content:** lauren bays Beauty Med Spa is dedicated to providing an unparalleled experience in aesthetic care. We believe in a holistic approach to beauty, combining innovative treatments with a tranquil environment and personalized attention. Our mission is to empower you to look and feel your absolute best, with results that are both natural and transformative.
 
 ## 4. Contact & Location Section
 
@@ -54,7 +54,7 @@
 
 **Headline:** Begin Your Journey
 
-**Call to Action:** Ready to experience the Bayless Beauty difference? Schedule your consultation or treatment today.
+**Call to Action:** Ready to experience the lauren bays Beauty difference? Schedule your consultation or treatment today.
 
 **Button Text:** Book an Appointment
 
@@ -62,7 +62,7 @@
 
 ## 6. Footer
 
-**Content:** Copyright © 2025 Bayless Beauty Med Spa. All rights reserved. | Privacy Policy | Terms of Service
+**Content:** Copyright © 2025 lauren bays Beauty Med Spa. All rights reserved. | Privacy Policy | Terms of Service
 
 ## Color Palette Inspiration (Soft, Neutral, Luxurious)
 
@@ -78,4 +78,4 @@
 
 ## Logo
 
-Use the provided `bayless_beauty.png` logo prominently in the header.
+Use the provided `lauren bays_beauty.png` logo prominently in the header.
